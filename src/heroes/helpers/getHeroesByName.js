@@ -4,7 +4,7 @@ export const getHeroesByName = ( nombre = '' ) => {
 
     nombre = nombre.toLocaleLowerCase().trim()
     
-    if( nombre === 0 ) return []
+    if( nombre.length === 0 ) return []
 
     return heroes.filter(
         hero=> hero.superhero.toLocaleLowerCase().includes(nombre)
