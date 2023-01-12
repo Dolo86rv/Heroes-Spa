@@ -19,8 +19,8 @@ export const Navbar = () => {
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
             
             <Link 
-                className={({isActive}) => `navbar-brand ${ isActive ? 'active' : '' }`}
-                to='/marvel'
+                className= "navbar-brand"
+                to="/"
             >
                 Asociaciones
             </Link>

@@ -8,6 +8,7 @@ import { authReducer } from './authReducer'
 }*/
 
 const init = () => {
+    
     const user = JSON.parse(localStorage.getItem('user'))
 
     return{
@@ -25,10 +26,7 @@ export const AuthProvider = ({children}) => {
         const u = {id: 'ABC', user}
         const action = {
             type: types.login,
-            payload: {
-                id: 'ABC',
-                user: user
-            }
+            payload: u
         }
 
         localStorage.setItem('u', JSON.stringify(u) )
@@ -47,8 +45,8 @@ export const AuthProvider = ({children}) => {
     return (
         <AuthContext.Provider value={{
             ...state,
-            login: login,
-            logout: logout
+            login,
+            logout
         }}>
             {children}
         </AuthContext.Provider>
